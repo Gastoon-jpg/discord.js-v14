@@ -22,6 +22,8 @@ const botToken = "token";
 
 client.on('ready', () => {
    console.log(`¡Estoy listo!`);
+   var slashCommands = client.slashCommands.map(x => x)
+    await client.application.commands.set(slashCommands);
 });
 
 client.slashCommands = new Discord.Collection();
